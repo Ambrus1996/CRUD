@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block stylesheets %}
+<style>
+    .form-signin {
+        background-color: rgba(0, 0, 0, 0.8); /* Zatamnjena pozadina za bolji kontrast */
+        padding: 40px; /* Veći padding za bolji izgled */
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Jača senka oko forme */
+        max-width: 400px; /* Ograničava širinu forme */
+        margin: 60px auto; /* Veći margin za bolje centriranje */
+        color: #ffffff; /* Beli tekst za bolju vidljivost */
+    }
+
+    .form-control {
+        margin-bottom: 20px; /* Veći razmak između polja */
+        background: rgba(255, 255, 255, 0.9); /* Delimično providna kontrola */
+        color: #333; /* Tamni tekst unutar kontrola */
+    }
+
+    .checkbox {
+        margin-top: 20px; /* Razmak iznad checkbox-a */
+    }
+
+    h1 {
+        text-align: center; /* Centriraj naslov */
+    }
+
+    .btn-primary {
+        width: 100%; /* Dugme zauzima celu širinu */
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 form-signin">
+            <form method="post">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+                
+                {% if app.user %}
+                    <div class="alert alert-info">
+                        You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                    </div>
+                    
+                {% else %}
+                    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                    <label for="inputEmail">Email</label>
+                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                    <label for="inputPassword">Password</label>
+                    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Remember me
+                        </label>
+                    </div>
+
+                    <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

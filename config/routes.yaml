@@ -1,0 +1,16 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+# config/routes.yaml
+app_logout:
+    path: /logout
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+
+# config/routes.yaml
+app_reservation_calendar:
+    path: /reservation/calendar
+    controller: App\Controller\HomeController::calendar
+

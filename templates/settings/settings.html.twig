@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Settings{% endblock %}
+
+{% block body %}
+<div class="container123">
+    <h2>Edit Your Profile</h2>
+    {{ form_start(form) }}
+        <div class="form-group">
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.password) }}
+            {{ form_widget(form.password, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.profilePicture) }}
+            {{ form_widget(form.profilePicture, {'attr': {'class': 'form-control-file'}}) }}
+            <small class="form-text text-muted">Leave blank to keep current image.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    {{ form_end(form) }}
+</div>
+
+{% endblock %}

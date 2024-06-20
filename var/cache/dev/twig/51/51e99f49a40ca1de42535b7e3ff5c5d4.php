@@ -1,0 +1,861 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\CoreExtension;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* base.html.twig */
+class __TwigTemplate_37d5dc3062bd246e9897c308d5fc88a1 extends Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'body' => [$this, 'block_body'],
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "base.html.twig"));
+
+        // line 1
+        yield "<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\"UTF-8\">
+    <title>";
+        // line 5
+        yield from $this->unwrap()->yieldBlock('title', $context, $blocks);
+        yield "</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\" rel=\"stylesheet\">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-image: url('";
+        // line 15
+        yield Twig\Extension\EscaperExtension::escape($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/teretana1.jpg"), "html", null, true);
+        yield "'); /* Postavi sliku kao pozadinu */
+            background-size: cover; /* Pokrije celu površinu */
+            background-position: center; /* Centriraj sliku */
+            background-repeat: no-repeat; /* Nemoj ponavljati sliku */
+            background-attachment: fixed; /* Fiksiraj sliku prilikom skrolanja */
+        }
+        
+        .form-signin {
+            max-width: 630px;
+            padding: 15px;
+            margin: auto;
+            background-color: rgba(245, 245, 245, 0.8); /* Delimično providna pozadina za formu */
+        }
+        
+        .form-signin .form-control {
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+        
+        .form-signin input[type=\"email\"],
+        .form-signin input[type=\"password\"] {
+            margin-bottom: 10px;
+            border-radius: 0;
+        }
+
+        .form-signin button {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+        }
+
+        .navbar {
+            border-radius: 5px; /* Zaobljene ivice */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Blaga senka za 3D efekat */
+            border: 1px solid #ddd; /* Suptilna ivica oko navbara */
+        }
+
+        @media (max-width: 991px) {
+            .navbar {
+                border-radius: 0; /* Na manjim ekranima, ukloni zaobljenost za bolji izgled */
+            }
+        }
+
+        .navbar .dropdown-menu a {
+        font-weight: bold;  /* Podebljavanje teksta */
+    }
+    .card {
+    border: none;
+    border-radius: 10px;
+    transition: transform .2s; /* Animacija za hover efekat */
+    }
+
+    .card:hover {
+        transform: scale(1.05); /* Lagano uvećanje kartice */
+    }
+
+    .card-title {
+        color: #0056b3; /* Tamnoplava boja za naslov */
+    }
+
+    .card-text {
+        font-size: 16px; /* Malo veći tekst za detalje */
+    }
+
+    .container {
+        max-width: 1200px; /* Ograničavanje širine kontejnera za lepši prikaz */
+    }
+
+            .profile-image {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+/* Stilovi za neulogovane korisnike */
+.welcome-guest {
+    text-align: center; /* Centriranje sadržaja */
+    margin: 5vh auto 0; /* Vertikalni margin sa vrha i centriranje horizontalno */
+    padding: 5px; /* Padding unutar bloka */
+    background: rgba(255, 255, 255, 0.8); /* Blago providna bela pozadina */
+    border-radius: 10px; /* Zaobljeni uglovi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Senka za bolji 3D efekat */
+    max-width: 800px; /* Maksimalna širina bloka */
+}
+
+.welcome-guest h1 {
+    margin-bottom: 15px; /* Margina između naslova i teksta */
+    font-size: 2rem; /* Veliki naslov */
+    color: #333; /* Tamniji tekst za bolji kontrast */
+}
+
+.welcome-guest p {
+    margin-bottom: 20px; /* Razmak između paragrafa i dugmadi */
+    font-size: 1.2rem; /* Veličina teksta */
+    color: #555; /* Siva boja teksta za bolji kontrast */
+}
+
+.welcome-guest a {
+    display: inline-block;
+    background-color: #007bff; /* Plava boja pozadine */
+    color: white; /* Bela boja teksta */
+    padding: 10px 20px; /* Padding za dugmad */
+    margin: 0 5px; /* Razmak između dugmadi */
+    border-radius: 5px; /* Zaobljeni uglovi za dugmad */
+    text-decoration: none; /* Nema podcrtanog teksta */
+}
+
+.welcome-guest a:hover {
+    background-color: #0056b3; /* Tamnija nijansa plave na hover */
+}
+
+/* Pikaday styles */
+.pika-single {
+    width: 60%; /* Prilagođava širinu kalendara */
+    margin: 20px auto; /* Centrira kalendar */
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Dodaje blagi senčeni efekat oko kalendara */
+    border-radius: 10px; /* Dodaje blago zaobljene ivice */
+    box-sizing: border-box; /* Osigurava da padding i border ne povećavaju širinu */
+}
+
+.pika-single.is-bound {
+    position: absolute;
+    top: 0; /* Izmenjeno pozicioniranje kako bi bilo odmah ispod input polja */
+    left: 0;
+}
+
+.pika-prev, .pika-next {
+    display: none; /* Skriva dugmad za navigaciju */
+}
+
+.pika-label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.pika-lendar {
+    width: 30%; /* Osigurava da unutrašnjost kalendara koristi celu širinu */
+}
+
+.pika-lendar th, .pika-lendar td {
+    padding: 10px 5px; /* Standardizovan padding za bolju čitljivost */
+    text-align: center;
+    box-sizing: border-box; /* Sprečava dodavanje paddinga na širinu */
+}
+
+.pika-button.pika-day {
+    padding: 12px; /* Povećan padding za veću visinu */
+    border-radius: 4px; /* Zaobljene ivice */
+}
+
+.pika-button.pika-day:hover,
+.pika-button.pika-day.is-today,
+.pika-button.pika-day.is-selected {
+    background-color: #007bff; /* Plava boja za hover, današnji i izabrani dan */
+    color: #fff; /* Bela boja teksta */
+}
+
+#datepicker {
+    width: 40%; /* Punu širinu svog kontejnera */
+    margin-top: 25px;
+    padding: 8px 10px;
+    font-size: 16px;
+    margin-bottom: 10px; /* Margina ispod za odvajanje od kalendara */
+}
+
+.pika-single.is-hidden {
+    display: none;
+}
+
+.datepicker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centriranje u vertikalnom smislu */
+    height: 100vh; /* Prilagođava visinu kontejnera */
+    padding: 0;
+    margin: 0;
+    background: none; /* Uklanja bilo kakvu pozadinu */
+}
+
+
+        .profile-image {
+    width: 40px;  /* ili druga odgovarajuća veličina */
+    height: 40px;
+    border-radius: 50%;  /* da slika izgleda kao krug */
+    object-fit: cover;  /* osigurava da slika lepo popuni prostor bez deformisanja */
+}
+
+/* KRECE STILIZACIJA SETTINGS-a */ 
+.container123 {
+    max-width: 500px; /* Ograničava širinu kontejnera */
+    background: rgba(255, 255, 255, 0.8); /* Delimična transparentnost */
+    padding: 30px; /* Prostor unutar kontejnera */
+    border-radius: 8px; /* Zaobljeni uglovi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga senka za 3D efekat */
+    margin: 50px auto; /* Centriranje i vertikalni razmak */
+}
+
+/* Stilizovanje naslova */
+h2 {
+    color: #333; /* Tamnija boja teksta za bolji kontrast */
+    text-align: center; /* Centriranje naslova */
+    margin-bottom: 20px; /* Razmak ispod naslova */
+}
+
+/* Stilizovanje dugmeta */
+.btn-primary {
+    width: 100%; /* Dugme da zauzima celu širinu */
+    padding: 10px; /* Veći padding za udobnije klikanje */
+    font-size: 18px; /* Veća veličina teksta za lakše čitanje */
+}
+
+/* Stilizovanje input polja */
+.form-control, .form-control-file {
+    background: #fff; /* Bela pozadina za bolju vidljivost */
+    border: 1px solid #ccc; /* Granica */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Unutrašnja senka za efekat dubine */
+}
+
+/* Tekstualne poruke za pomoć */
+.form-text.text-muted {
+    font-size: 14px; /* Prilagođena veličina teksta */
+}
+
+    </style>
+</head>
+<body>
+
+<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+    <div class=\"container-fluid\">
+        <a class=\"navbar-brand\" href=\"";
+        // line 253
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+        yield "\">Home</a>
+        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+            <span class=\"navbar-toggler-icon\"></span>
+        </button>
+        <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+            <ul class=\"navbar-nav mr-auto\">
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"";
+        // line 260
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reserve");
+        yield "\">Reserve</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"";
+        // line 263
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_calendar");
+        yield "\">Calendar</a>
+                </li>
+            </ul>
+            <ul class=\"navbar-nav ml-auto\">
+                ";
+        // line 267
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 267, $this->source); })()), "user", [], "any", false, false, false, 267)) {
+            // line 268
+            yield "                <li class=\"nav-item dropdown\">
+                    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+                        <img src=\"";
+            // line 270
+            yield Twig\Extension\EscaperExtension::escape($this->env, ((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 270, $this->source); })()), "user", [], "any", false, false, false, 270), "profilePicture", [], "any", false, false, false, 270)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/profile_pictures/" . CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 270, $this->source); })()), "user", [], "any", false, false, false, 270), "profilePicture", [], "any", false, false, false, 270)))) : ($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/default.png"))), "html", null, true);
+            yield "\" alt=\"Profile Picture\" class=\"profile-image\">
+                    </a>
+                    <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdown\">
+                        <a class=\"dropdown-item\" href=\"";
+            // line 273
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_my_reservations");
+            yield "\">My Reservations</a>
+                        <a class=\"dropdown-item\" href=\"";
+            // line 274
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_settings");
+            yield "\">Settings</a>
+                        <a class=\"dropdown-item\" href=\"";
+            // line 275
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            yield "\">Logout</a>
+                    </div>
+                </li>
+                ";
+        } else {
+            // line 279
+            yield "                <li class=\"nav-item\">
+                    <img src=\"";
+            // line 280
+            yield Twig\Extension\EscaperExtension::escape($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/default_profile.png"), "html", null, true);
+            yield "\" alt=\"Not logged in\" class=\"profile-image\">
+                </li>
+                ";
+        }
+        // line 283
+        yield "            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+    <div class=\"container-fluid\">
+        ";
+        // line 291
+        yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
+        // line 292
+        yield "    </div>
+
+    <!-- Bootstrap JS and its dependencies (Popper.js and jQuery) -->
+    <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\"></script>
+    <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js\"></script>
+    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>
+    
+    <!-- Pikaday JavaScript -->
+    <script src=\"https://cdn.jsdelivr.net/npm/pikaday/pikaday.js\"></script>
+    <!-- Pikaday initialization -->
+    <script>
+    
+    
+ document.addEventListener('DOMContentLoaded', function() {
+    var inputField = document.getElementById('datepicker');
+    if (inputField) {
+        var today = new Date();
+        var maxDate = new Date();
+        maxDate.setDate(today.getDate() + 30); // Dozvoljava rezervacije do 30 dana unapred
+
+        var picker = new Pikaday({
+            field: inputField,
+            format: 'YYYY-MM-DD',
+            minDate: today,
+            maxDate: maxDate,
+            firstDay: 1, // Nedelja kao prvi dan
+            showMonthAfterYear: true,
+            yearSuffix: '', // Bez sufiksa godine
+            i18n: {
+                previousMonth: 'previousMonth',
+                nextMonth: 'nextMonth',
+                months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                weekdays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                weekdaysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+            },
+            onSelect: function(date) {
+                var formattedDate = picker.toString();
+                window.location.href = `/reserve?date=\${formattedDate}`;
+            }
+        });
+        picker.show();
+    } else {
+        console.error('Datepicker input field not found');
+    }
+});
+
+
+    </script>
+    <script>
+\$(document).ready(function() {
+    \$('.dropdown-toggle').click(function(event){
+        var dropdown = \$(this).parent('.dropdown');
+        if(dropdown.hasClass('show')){
+            dropdown.removeClass('show');
+            dropdown.find('.dropdown-menu').removeClass('show');
+        } else {
+            dropdown.addClass('show');
+            dropdown.find('.dropdown-menu').addClass('show');
+        }
+    });
+});
+</script>
+
+    
+</body>
+</html>
+
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        return; yield '';
+    }
+
+    // line 5
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        yield "Welcome!";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        return; yield '';
+    }
+
+    // line 291
+    public function block_body($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        return; yield '';
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getTemplateName()
+    {
+        return "base.html.twig";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDebugInfo()
+    {
+        return array (  463 => 291,  449 => 5,  374 => 292,  372 => 291,  362 => 283,  356 => 280,  353 => 279,  346 => 275,  342 => 274,  338 => 273,  332 => 270,  328 => 268,  326 => 267,  319 => 263,  313 => 260,  303 => 253,  62 => 15,  49 => 5,  43 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\"UTF-8\">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\" rel=\"stylesheet\">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-image: url('{{ asset('images/teretana1.jpg') }}'); /* Postavi sliku kao pozadinu */
+            background-size: cover; /* Pokrije celu površinu */
+            background-position: center; /* Centriraj sliku */
+            background-repeat: no-repeat; /* Nemoj ponavljati sliku */
+            background-attachment: fixed; /* Fiksiraj sliku prilikom skrolanja */
+        }
+        
+        .form-signin {
+            max-width: 630px;
+            padding: 15px;
+            margin: auto;
+            background-color: rgba(245, 245, 245, 0.8); /* Delimično providna pozadina za formu */
+        }
+        
+        .form-signin .form-control {
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+        
+        .form-signin input[type=\"email\"],
+        .form-signin input[type=\"password\"] {
+            margin-bottom: 10px;
+            border-radius: 0;
+        }
+
+        .form-signin button {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+        }
+
+        .navbar {
+            border-radius: 5px; /* Zaobljene ivice */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Blaga senka za 3D efekat */
+            border: 1px solid #ddd; /* Suptilna ivica oko navbara */
+        }
+
+        @media (max-width: 991px) {
+            .navbar {
+                border-radius: 0; /* Na manjim ekranima, ukloni zaobljenost za bolji izgled */
+            }
+        }
+
+        .navbar .dropdown-menu a {
+        font-weight: bold;  /* Podebljavanje teksta */
+    }
+    .card {
+    border: none;
+    border-radius: 10px;
+    transition: transform .2s; /* Animacija za hover efekat */
+    }
+
+    .card:hover {
+        transform: scale(1.05); /* Lagano uvećanje kartice */
+    }
+
+    .card-title {
+        color: #0056b3; /* Tamnoplava boja za naslov */
+    }
+
+    .card-text {
+        font-size: 16px; /* Malo veći tekst za detalje */
+    }
+
+    .container {
+        max-width: 1200px; /* Ograničavanje širine kontejnera za lepši prikaz */
+    }
+
+            .profile-image {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+/* Stilovi za neulogovane korisnike */
+.welcome-guest {
+    text-align: center; /* Centriranje sadržaja */
+    margin: 5vh auto 0; /* Vertikalni margin sa vrha i centriranje horizontalno */
+    padding: 5px; /* Padding unutar bloka */
+    background: rgba(255, 255, 255, 0.8); /* Blago providna bela pozadina */
+    border-radius: 10px; /* Zaobljeni uglovi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Senka za bolji 3D efekat */
+    max-width: 800px; /* Maksimalna širina bloka */
+}
+
+.welcome-guest h1 {
+    margin-bottom: 15px; /* Margina između naslova i teksta */
+    font-size: 2rem; /* Veliki naslov */
+    color: #333; /* Tamniji tekst za bolji kontrast */
+}
+
+.welcome-guest p {
+    margin-bottom: 20px; /* Razmak između paragrafa i dugmadi */
+    font-size: 1.2rem; /* Veličina teksta */
+    color: #555; /* Siva boja teksta za bolji kontrast */
+}
+
+.welcome-guest a {
+    display: inline-block;
+    background-color: #007bff; /* Plava boja pozadine */
+    color: white; /* Bela boja teksta */
+    padding: 10px 20px; /* Padding za dugmad */
+    margin: 0 5px; /* Razmak između dugmadi */
+    border-radius: 5px; /* Zaobljeni uglovi za dugmad */
+    text-decoration: none; /* Nema podcrtanog teksta */
+}
+
+.welcome-guest a:hover {
+    background-color: #0056b3; /* Tamnija nijansa plave na hover */
+}
+
+/* Pikaday styles */
+.pika-single {
+    width: 60%; /* Prilagođava širinu kalendara */
+    margin: 20px auto; /* Centrira kalendar */
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Dodaje blagi senčeni efekat oko kalendara */
+    border-radius: 10px; /* Dodaje blago zaobljene ivice */
+    box-sizing: border-box; /* Osigurava da padding i border ne povećavaju širinu */
+}
+
+.pika-single.is-bound {
+    position: absolute;
+    top: 0; /* Izmenjeno pozicioniranje kako bi bilo odmah ispod input polja */
+    left: 0;
+}
+
+.pika-prev, .pika-next {
+    display: none; /* Skriva dugmad za navigaciju */
+}
+
+.pika-label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.pika-lendar {
+    width: 30%; /* Osigurava da unutrašnjost kalendara koristi celu širinu */
+}
+
+.pika-lendar th, .pika-lendar td {
+    padding: 10px 5px; /* Standardizovan padding za bolju čitljivost */
+    text-align: center;
+    box-sizing: border-box; /* Sprečava dodavanje paddinga na širinu */
+}
+
+.pika-button.pika-day {
+    padding: 12px; /* Povećan padding za veću visinu */
+    border-radius: 4px; /* Zaobljene ivice */
+}
+
+.pika-button.pika-day:hover,
+.pika-button.pika-day.is-today,
+.pika-button.pika-day.is-selected {
+    background-color: #007bff; /* Plava boja za hover, današnji i izabrani dan */
+    color: #fff; /* Bela boja teksta */
+}
+
+#datepicker {
+    width: 40%; /* Punu širinu svog kontejnera */
+    margin-top: 25px;
+    padding: 8px 10px;
+    font-size: 16px;
+    margin-bottom: 10px; /* Margina ispod za odvajanje od kalendara */
+}
+
+.pika-single.is-hidden {
+    display: none;
+}
+
+.datepicker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centriranje u vertikalnom smislu */
+    height: 100vh; /* Prilagođava visinu kontejnera */
+    padding: 0;
+    margin: 0;
+    background: none; /* Uklanja bilo kakvu pozadinu */
+}
+
+
+        .profile-image {
+    width: 40px;  /* ili druga odgovarajuća veličina */
+    height: 40px;
+    border-radius: 50%;  /* da slika izgleda kao krug */
+    object-fit: cover;  /* osigurava da slika lepo popuni prostor bez deformisanja */
+}
+
+/* KRECE STILIZACIJA SETTINGS-a */ 
+.container123 {
+    max-width: 500px; /* Ograničava širinu kontejnera */
+    background: rgba(255, 255, 255, 0.8); /* Delimična transparentnost */
+    padding: 30px; /* Prostor unutar kontejnera */
+    border-radius: 8px; /* Zaobljeni uglovi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga senka za 3D efekat */
+    margin: 50px auto; /* Centriranje i vertikalni razmak */
+}
+
+/* Stilizovanje naslova */
+h2 {
+    color: #333; /* Tamnija boja teksta za bolji kontrast */
+    text-align: center; /* Centriranje naslova */
+    margin-bottom: 20px; /* Razmak ispod naslova */
+}
+
+/* Stilizovanje dugmeta */
+.btn-primary {
+    width: 100%; /* Dugme da zauzima celu širinu */
+    padding: 10px; /* Veći padding za udobnije klikanje */
+    font-size: 18px; /* Veća veličina teksta za lakše čitanje */
+}
+
+/* Stilizovanje input polja */
+.form-control, .form-control-file {
+    background: #fff; /* Bela pozadina za bolju vidljivost */
+    border: 1px solid #ccc; /* Granica */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Unutrašnja senka za efekat dubine */
+}
+
+/* Tekstualne poruke za pomoć */
+.form-text.text-muted {
+    font-size: 14px; /* Prilagođena veličina teksta */
+}
+
+    </style>
+</head>
+<body>
+
+<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+    <div class=\"container-fluid\">
+        <a class=\"navbar-brand\" href=\"{{ path('app_home') }}\">Home</a>
+        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+            <span class=\"navbar-toggler-icon\"></span>
+        </button>
+        <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+            <ul class=\"navbar-nav mr-auto\">
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"{{ path('app_reserve') }}\">Reserve</a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"{{ path('app_calendar') }}\">Calendar</a>
+                </li>
+            </ul>
+            <ul class=\"navbar-nav ml-auto\">
+                {% if app.user %}
+                <li class=\"nav-item dropdown\">
+                    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+                        <img src=\"{{ app.user.profilePicture ? asset('uploads/profile_pictures/' ~ app.user.profilePicture) : asset('images/default.png') }}\" alt=\"Profile Picture\" class=\"profile-image\">
+                    </a>
+                    <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdown\">
+                        <a class=\"dropdown-item\" href=\"{{ path('app_my_reservations') }}\">My Reservations</a>
+                        <a class=\"dropdown-item\" href=\"{{ path('app_settings') }}\">Settings</a>
+                        <a class=\"dropdown-item\" href=\"{{ path('app_logout') }}\">Logout</a>
+                    </div>
+                </li>
+                {% else %}
+                <li class=\"nav-item\">
+                    <img src=\"{{ asset('images/default_profile.png') }}\" alt=\"Not logged in\" class=\"profile-image\">
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+    <div class=\"container-fluid\">
+        {% block body %}{% endblock %}
+    </div>
+
+    <!-- Bootstrap JS and its dependencies (Popper.js and jQuery) -->
+    <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\"></script>
+    <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js\"></script>
+    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>
+    
+    <!-- Pikaday JavaScript -->
+    <script src=\"https://cdn.jsdelivr.net/npm/pikaday/pikaday.js\"></script>
+    <!-- Pikaday initialization -->
+    <script>
+    
+    
+ document.addEventListener('DOMContentLoaded', function() {
+    var inputField = document.getElementById('datepicker');
+    if (inputField) {
+        var today = new Date();
+        var maxDate = new Date();
+        maxDate.setDate(today.getDate() + 30); // Dozvoljava rezervacije do 30 dana unapred
+
+        var picker = new Pikaday({
+            field: inputField,
+            format: 'YYYY-MM-DD',
+            minDate: today,
+            maxDate: maxDate,
+            firstDay: 1, // Nedelja kao prvi dan
+            showMonthAfterYear: true,
+            yearSuffix: '', // Bez sufiksa godine
+            i18n: {
+                previousMonth: 'previousMonth',
+                nextMonth: 'nextMonth',
+                months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                weekdays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                weekdaysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+            },
+            onSelect: function(date) {
+                var formattedDate = picker.toString();
+                window.location.href = `/reserve?date=\${formattedDate}`;
+            }
+        });
+        picker.show();
+    } else {
+        console.error('Datepicker input field not found');
+    }
+});
+
+
+    </script>
+    <script>
+\$(document).ready(function() {
+    \$('.dropdown-toggle').click(function(event){
+        var dropdown = \$(this).parent('.dropdown');
+        if(dropdown.hasClass('show')){
+            dropdown.removeClass('show');
+            dropdown.find('.dropdown-menu').removeClass('show');
+        } else {
+            dropdown.addClass('show');
+            dropdown.find('.dropdown-menu').addClass('show');
+        }
+    });
+});
+</script>
+
+    
+</body>
+</html>
+
+", "base.html.twig", "/home/ambro/CRUD/templates/base.html.twig");
+    }
+}

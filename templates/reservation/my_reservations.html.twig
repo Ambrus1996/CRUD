@@ -1,0 +1,25 @@
+{# templates/reservation/my_reservations.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}My Reservations{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4" style="font-weight: bold; color:white; font-size: 40px;">My Reservations</h1>
+    <div class="row">
+        {% for reservation in reservations %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">{{ reservation.date|date('Y-m-d') }} at {{ reservation.time|date('H:i') }}</h5>
+                    <p class="card-text">{{ reservation.serviceType }}</p>
+                    <p class="card-text">Reserved by: {{ reservation.customerName }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
